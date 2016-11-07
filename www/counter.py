@@ -2,15 +2,13 @@
 
 from flask import Flask, send_from_directory, render_template
 import os
-#import redis
 import socket
 from redis import Redis
 
 
 app = Flask(__name__)
 hostname = socket.gethostname()
-redis = redis.Redis("redis")
-
+redis = Redis("redis")
 
 if "DEBUG" in os.environ:
     app.debug = True

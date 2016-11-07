@@ -2,9 +2,9 @@
 
 from flask import Flask, send_from_directory, render_template
 import os
-import redis
+#import redis
 import socket
-
+from redis import Redis
 
 
 app = Flask(__name__)
